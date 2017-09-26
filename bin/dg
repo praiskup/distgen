@@ -18,7 +18,7 @@ def die(msg):
     error(msg)
     sys.exit(1)
 
-description = \
+epilog = \
 """
 Generate script using predefined metadata about distribution and
 templates.
@@ -33,7 +33,8 @@ As an example of 'dg' usage, to generate _Dockerfile_ for Fedora
 """
 
 parser = ArgumentParser(
-    description=description,
+    description="Templating system/generator for distributions",
+    epilog=epilog,
     formatter_class=RawDescriptionHelpFormatter,
 )
 parser.add_argument(
